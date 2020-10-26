@@ -895,8 +895,6 @@ Canvas::resurface(Local<Object> canvas) {
   Nan::HandleScope scope;
   Local<Value> context;
 
-  backend()->recreateSurface();
-
   // Reset context
 	context = Nan::Get(canvas, Nan::New<String>("context").ToLocalChecked()).ToLocalChecked();
 	if (!context->IsUndefined()) {
